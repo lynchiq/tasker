@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Routes from './routes';
+
+const App = () => (
+  <Router>
+    <Routes />
+  </Router>
+);
 
 ReactDOM.render(
   <React.StrictMode>

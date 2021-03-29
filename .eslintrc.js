@@ -5,9 +5,9 @@ module.exports = {
     'jest/globals': true,
   },
   extends: [
+    'airbnb',
     'plugin:react/recommended',
     'plugin:jest/recommended',
-    'airbnb',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
