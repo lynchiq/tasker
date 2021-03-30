@@ -1,32 +1,21 @@
-import React from 'react';
+import { HomePage, LoginPage, RegisterPage } from '../pages';
+import { IRoute } from '../types/route.types';
 
-import { HomePage } from '../pages';
-
-export interface RouteType {
-  path?: string
-  name?: string
-  layout?: boolean
-  exact?: boolean
-  helmet: {
-    title: string,
-    description: string
-  }
-  component?: React.ComponentType
-  routes?: RouteType[]
-}
-
-const routes: RouteType[] = [
+export const ROUTES: IRoute[] = [
   {
-    path: '/home',
-    name: 'Home',
-    layout: true,
+    path: '/login',
     exact: true,
-    helmet: {
-      title: 'Welcome to Tasker',
-      description: 'Tasker home page',
-    },
+    component: LoginPage,
+  },
+  {
+    path: '/register',
+    exact: true,
+    component: RegisterPage,
+  },
+  {
+    path: '/',
+    exact: true,
+    isPrivate: true,
     component: HomePage,
   },
 ];
-
-export default routes;
